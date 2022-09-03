@@ -2,7 +2,7 @@ spring:
   datasource:
     username: root
     password: root
-    url: jdbc:mysql://#:3306/gulimall_oms
+    url: jdbc:mysql://127.0.0.1:3306/gulimall_oms
     driver-class-name: com.mysql.cj.jdbc.Driver
     hikari:
       max-lifetime: 50000
@@ -18,7 +18,7 @@ spring:
   thymeleaf:
     cache: false
   redis:
-    host: 192.168.56.102
+    host: 192.168.2.6
   session:
     store-type: redis
 

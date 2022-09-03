@@ -1,7 +1,6 @@
 package io.niceseason.gulimall.search.config;
 
 import org.apache.http.HttpHost;
-import org.elasticsearch.client.HttpAsyncResponseConsumerFactory;
 import org.elasticsearch.client.RequestOptions;
 import org.elasticsearch.client.RestClient;
 import org.elasticsearch.client.RestHighLevelClient;
@@ -14,8 +13,8 @@ public class GulimallElasticSearchConfig {
     public RestHighLevelClient restHighLevelClient() {
         RestHighLevelClient client = new RestHighLevelClient(
                 RestClient.builder(
-                        new HttpHost("192.168.56.102", 9200, "http"),
-                        new HttpHost("192.168.56.102", 9201, "http")));
+                        new HttpHost("192.168.2.6", 9200, "http"),
+                        new HttpHost("192.168.2.6", 9201, "http")));
         return client;
     }
 
