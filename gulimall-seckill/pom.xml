@@ -42,12 +42,6 @@
             <groupId>io.niceseason</groupId>
             <artifactId>gulimall-common</artifactId>
             <version>0.0.1-SNAPSHOT</version>
-            <exclusions>
-                <exclusion>
-                    <artifactId>spring-cloud-starter-zipkin</artifactId>
-                    <groupId>org.springframework.cloud</groupId>
-                </exclusion>
-            </exclusions>
         </dependency>
         <dependency>
             <groupId>org.redisson</groupId>
