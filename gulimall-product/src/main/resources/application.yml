@@ -6,21 +6,19 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     hikari:
       max-lifetime: 50000
-  #  application:
-#    name: gulimall-product
   cloud:
-      nacos:
-        discovery:
-          server-addr: #nacos注册中心地址
-      # 文件上传秘钥
-      alicloud:
-        access-key: #
-        secret-key: #
-        oss:
-          endpoint: oss-cn-hangzhou.aliyuncs.com
-      sentinel:
-        transport:
-          dashboard: localhost:8080
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+    # 文件上传秘钥
+    #      alicloud:
+    #        access-key: #
+    #        secret-key: #
+    #        oss:
+    #          endpoint: oss-cn-hangzhou.aliyuncs.com
+    sentinel:
+      transport:
+        dashboard: localhost:8080
 
   zipkin:
     base-url: http://localhost:9411
@@ -43,6 +41,8 @@ spring:
       time-to-live: 3600000
   session:
     store-type: redis
+  application:
+    name: gulimall-product
 
 
 mybatis-plus:
@@ -54,7 +54,7 @@ mybatis-plus:
       logic-not-delete-value: 0
 
 server:
-  port: 10002
+  port: 10012
   servlet:
     session:
       timeout: 30m
@@ -69,7 +69,6 @@ gulimall:
     corePoolSize: 10
     maxPoolSize: 20
     keepAliveTime: 300
-<<<<<<< HEAD
 management:
   endpoints:
     web:
@@ -78,5 +77,3 @@ management:
 feign:
   sentinel:
     enabled: true
-=======
->>>>>>> 9e4857d66f652e179bc55f579092d12e93ed463a

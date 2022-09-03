@@ -11,7 +11,7 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: #nacos注册中心地址
+        server-addr: localhost:8848
     sentinel:
       transport:
         dashboard: localhost:8080
@@ -23,7 +23,7 @@ spring:
     store-type: redis
 
   rabbitmq:
-    host: #
+    host: localhost
     username: niceseason
     password: mo19960729
     listener:
